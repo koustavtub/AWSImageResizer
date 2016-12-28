@@ -105,7 +105,6 @@ elif [ -n "$s3url" ] && [ -n "$localUrl" ]; then
 	
 	#Sync to aws
 	aws s3 sync $localUrl $s3url 
-	exit 1
 else
 	echo "Running in Conversion Only Mode in `pwd` !"
 	read  -p "Continue(Y/n)" confirm
@@ -114,3 +113,5 @@ else
 		RecursiveResize
 	fi
 fi
+
+echo "################## Completed ##################"
